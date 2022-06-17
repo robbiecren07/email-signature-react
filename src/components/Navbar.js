@@ -13,7 +13,7 @@ const Navbar = () => {
           <Heading as="h1" fontSize="xl">Email Signature Generator | Web App</Heading>
         </a>
         <Box>
-          <a href="/">
+          <a href="https://github.com/robbiecren07/email-signature-react" target="_blank" rel="noreferrer">
             <Icon as={GitHubIcon} w={6} h={6} mr="20px" />
           </a>
           <ColorModeSwitcher justifySelf="flex-end" />
