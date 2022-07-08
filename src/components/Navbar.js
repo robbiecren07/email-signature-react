@@ -8,7 +8,18 @@ const Navbar = () => {
   
   return (
     <>
-      <Box as="header" pos="relative" display="flex" alignItems="center" justifyContent="space-between" w="100%" height="60px" p="10px 30px" borderBottom="1px solid #BBB">
+      <Box
+        as="header"
+        pos="relative"
+        display="flex"
+        flexDirection={{ base: 'column', lg: 'row' }}
+        alignItems="center"
+        justifyContent="space-between"
+        w="100%"
+        height={{ base: '90px', lg: "60px" }}
+        p={{ base: "10px", lg: "10px 30px" }}
+        borderBottom="1px solid #BBB"
+      >
         <a href="/">
           <Heading as="h1" fontSize="xl">Email Signature Generator | Web App</Heading>
         </a>

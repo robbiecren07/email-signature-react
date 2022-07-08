@@ -17,8 +17,12 @@ select {
 }
 #root {
   width: 100vw;
-  height: 100vh;
   overflow: hidden;
+}
+@media (min-width: 1024px) {
+  #root {
+    height: 100vh;
+  }
 }
 .nav_grid {
   display: grid;

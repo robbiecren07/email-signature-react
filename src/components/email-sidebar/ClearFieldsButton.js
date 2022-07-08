@@ -18,7 +18,7 @@ const ClearFieldsButton = ({ handleClick }) => {
   }
 
   return (
-    <Flex position="absolute" bottom="20px" left="20px">
+    <Flex position={{ lg: "absolute" }} bottom={{ lg: "20px" }} left={{ lg: "20px" }} m={{base: '20px', lg: '0'}}>
       <Button leftIcon={<DeleteIcon />} colorScheme="red" variant="solid" onClick={() => handleClearFields()}>
         Clear all fields
       </Button>

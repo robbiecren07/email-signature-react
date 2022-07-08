@@ -62,8 +62,8 @@ function App() {
 
               <Box w="100%" h="100%" display="flex" flexDirection="column">
                 <Navbar />
-                <Box as="main" w="100%" h="calc(100vh - 60px)">
-                  <Grid h="100%" templateColumns="380px auto">
+                <Box as="main" w="100%" h={{ lg: "calc(100vh - 60px)" }}>
+                  <Grid h="100%" templateColumns={{ base: '1fr', lg: "320px auto", xl: "380px auto" }}>
                     <GridItem as="aside" borderRight="1px solid #BBB" overflow="hidden">
                       {createSig === true ?
                           <motion.div
@@ -79,8 +79,8 @@ function App() {
                       }
                     </GridItem>
 
-                    <GridItem as="section">
-                      <Box w="100%" h="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center" gap="40px">
+                    <GridItem as="section" display="flex" flexDirection="column">
+                      <Box w="100%" h="100%" display="flex" flexDirection="column" justifyContent="center" alignItems="center" gap="40px" px={2}>
                         <EmailTemplates />
                         <CreateSignatureButton handleClick={(value) => handleCreateSignature(value)} />
                       </Box>
@@ -90,7 +90,7 @@ function App() {
                 </Box>
               </Box>
 
-              <Text fontSize="xs" pos="absolute" bottom="10px" right="10px">This app was built with React, as a learning project.</Text>
+              <Text fontSize="xs" position={{ lg: "absolute" }} bottom={{ lg: "10px" }} right={{ lg: "10px" }} m={{ base: '10px', lg: '0'}}>This app was built with React, as a learning project.</Text>
 
             </UploadContextProvider>
           </CustomizeContextProvider>
